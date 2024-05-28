@@ -82,4 +82,13 @@
 // buttonGood.addEventListener("click", alertBtn2);
 
 // EXO 2 
+// const btn = document.querySelectorAll("button");
+// btn.forEach((item)=>{item.addEventListener('click',function(){item.nextElementSibling.classList.toggle('hidden');
+// if(item.innerText=='Open tab'|| item.nextElementSibling.className != 'hidden') {item.innerText = 'Close tab'}
+// else if(item.innerText=='Close tab'|| item.nextElementSibling.className == 'hidden') {item.innerText = 'Open tab'}
 
+// })})
+    //     {item.innerText = 'Close tab'};});
+    // if(item.innerText = 'Close tab'){item.innerText = 'Open tab'};})
+// addEventListener("click",alert);
+//.addEventListener('click',function(){item.parentElement.classList.remove('hidden');
