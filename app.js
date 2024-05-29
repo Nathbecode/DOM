@@ -92,3 +92,63 @@
     // if(item.innerText = 'Close tab'){item.innerText = 'Open tab'};})
 // addEventListener("click",alert);
 //.addEventListener('click',function(){item.parentElement.classList.remove('hidden');
+
+// EXO 3
+
+// const button = document.querySelector('button');
+
+// const color = () => {
+//     let x =()=> Math.floor((Math.random() * 255) + 1);
+//     document.querySelector('body').style.backgroundColor = `rgb(${x()}, ${x()}, ${x()})`;
+//     const h1 = document.querySelector('body');
+//     const style = window.getComputedStyle(h1).backgroundColor;
+//     document.querySelector('h1').innerText = style;
+// }
+
+// button.addEventListener('click',color);
+
+//region SCORE KEEPER
+
+
+// const btn = document.querySelector('body');
+// let x=0;
+// let score1 = document.querySelector('h2').firstChild;
+// let stylescore1 = document.querySelector('h2').querySelector('span');
+// stylescore1.style.color = 'black';
+// let y=0;
+// let array = document.querySelector('h2').getElementsByClassName("play2");
+// let score2 = array[0];
+// let stylescore2 = document.querySelectorAll('span')[1];
+// let z;
+
+// btn.addEventListener('click',(e) => {
+//     if (e.target.innerText === "+1 player One") {
+//         if (x<5 && !(y+x>=5)) {
+//             x++;
+//         score1.innerText= `${x}`}        
+//         }   if (e.target.innerText === "+1 player Two") {
+//         if (y<5 && !(y+x>=5)) {
+//             y++;
+//             score2.innerText= `${y}`}            
+//         }
+//         if(x>y) {
+//         stylescore1.style.color = 'green';
+//         } else if (x<y) {
+//             stylescore1.style.color = 'red'
+//         }
+//         if(y>x) {
+//             stylescore2.style.color = 'green'
+//         } else if (y<x) {
+//             stylescore2.style.color = 'red'
+//         }
+//     if (e.target.innerText === "Reset") {
+//         x=0;
+//         score1.innerText= `${x}`
+//         y=0
+//         score2.innerText= `${y}`
+//         stylescore1.style.color = 'black';
+//         stylescore2.style.color = 'black';
+//     }
+// })
+
+//
