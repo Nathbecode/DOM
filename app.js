@@ -151,4 +151,76 @@
 //     }
 // })
 
-//
+//region Form Validation
+
+document.getElementById('email').addEventListener("input",checkEmail);
+function checkEmail (event) {
+    let email = event.target.value;
+    let ermsg = document.getElementById('msgem');
+    if(!email.includes('@') || !email.includes('.')) {
+        ermsg.style.display = 'unset';
+        document.getElementById('email').style.backgroundColor = 'rgb(219,111,111)';
+    } else if (email.includes('@')&&email.includes('.')) {
+        ermsg.style.display = 'none';
+        document.getElementById('email').style.backgroundColor='rgb(111,219,190)';
+    }
+}
+
+document.getElementById('username').addEventListener("input",checkUser);
+function checkUser () {
+    let user = document.getElementById('username').value;
+    let array = user.split('');
+    let ermsg = document.getElementById('msgus');
+    if (array.length<5) {
+        ermsg.style.display = 'unset';
+        document.getElementById('username').style.backgroundColor = 'rgb(219,111,111)';
+    }  else if (array.length>10) {
+        ermsg.style.display = 'unset';
+        document.getElementById('username').style.backgroundColor = 'rgb(219,111,111)';
+    }  else if(!(/^[a-z]+$/).test(user)) {
+        ermsg.style.display = 'unset';
+        document.getElementById('username').style.backgroundColor = 'rgb(219,111,111)';
+        } 
+    else {
+        ermsg.style.display = 'none';
+        document.getElementById('username').style.backgroundColor='rgb(111,219,190)';
+    }
+}
+
+document.getElementById('password').addEventListener("input",checkPass);
+function checkPass () {
+    let password = document.getElementById('password').value.split('')
+    let ermsg = document.getElementById('msgpa');
+    if(password.length<8) {
+        ermsg.style.display = 'unset';
+        document.getElementById('password').style.backgroundColor = 'rgb(219,111,111)';
+    } else if (password.length>15) {
+        ermsg.style.display = 'unset';
+        document.getElementById('password').style.backgroundColor = 'rgb(219,111,111)';
+    }
+    else {
+        ermsg.style.display = 'none';
+        document.getElementById('password').style.backgroundColor='rgb(111,219,190)';
+    }
+}
+
+document.getElementById('confirmpassword').addEventListener("input",checkCo);
+function checkCo () {
+    let password = document.getElementById('password').value;
+    let confpassword = document.getElementById('confirmpassword').value;
+    let ermsg = document.getElementById('msgco');
+    if(password===confpassword){
+        ermsg.style.display = 'none';
+        document.getElementById('confirmpassword').style.backgroundColor='rgb(111,219,190)';
+    } 
+    else {
+        ermsg.style.display = 'unset';
+        document.getElementById('confirmpassword').style.backgroundColor = 'rgb(219,111,111)';
+    }
+}
+
+document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log(`Your username is: ${document.getElementById('username').value}, your email is: ${document.getElementById('email').value}, 
+    your password is: ${document.getElementById('password').value}, and your confirmation of password is: ${document.getElementById('confirmpassword').value}`);
+});
