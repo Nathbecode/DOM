@@ -1,35 +1,3 @@
-// document.querySelector('.cell1').addEventListener('click',(e)=>{inputs(e)});
-
-// let valuecell1;
-
-// const inputs = () => {
-//     let where = document.querySelector(".cell1");
-//         if (where.querySelector('input') == null){
-//         const input = document.createElement('input');
-//         input.type = 'text';
-//         input.id= 'child';
-//         where.appendChild(input);
-//         let stylegrid = input.style;
-//         stylegrid.backgroundColor = 'rgb(237, 237, 198)';
-//         stylegrid.width = '95px';
-//         stylegrid.height = '95px';
-//         valuecell1 = document.querySelector(".cell1").querySelector('input').value;
-//         return valuecell1
-//         } 
-//         if (where.querySelector('input')&& where.querySelector('p')==null){
-//             const p = document.createElement('p');
-//             p.textContent = 'Write X or O';
-//             where.appendChild(p);
-//             let stylep = where.querySelector('p').style;
-//             stylep.fontSize = '13px';
-//             stylep.color = 'red';
-//             stylep.margin = '0 auto';
-//         }
-//         if (valuecell1!==null) {
-//             where.removeEventListener('click',(e)=>{inputs(e)});
-//         }  
-//     }
-
 document.querySelector('.board').addEventListener('click',(e)=>{inputs(e)});
 
 const inputs = (e) => {
